@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Listar Empleados</title>
+</head>
+<body>
+    <div>
+        <h5 class="display-5">Empleados</h5>
+
+        <table class="table">
+
+            @*@foreach (WebOWIN2.entityFramework.AspNetRoles item in ViewBag.lista)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+            </tr>
+        }*@
+
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Num</td>
+                <td>Usuario</td>
+            </tr>
+            <tr>
+                <td>NumVariable</td>
+                <td>UsuarioVariable</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Listar Clientes</title>
+</head>
+<body>
+    <div>
+        <h5 class="display-5">Clientes</h5>
+
+        <table class="table">
+
+            @*@foreach (WebOWIN2.entityFramework.AspNetRoles item in ViewBag.lista)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                </tr>
+            }*@
+
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Rut</td>
+                <td>Nombre</td>
+                <td>Teléfono</td>
+            </tr>
+            <tr>
+                <td>RutVariable</td>
+                <td>NombreVariable</td>
+                <td>TeléfonoVariable</td>
+            </tr>
+        </table>
+
+        <button type="submit" class="btn btn-secondary btn-sm">Ingresar Cliente</button>
+
+    </div>
+</body>
+</html>
