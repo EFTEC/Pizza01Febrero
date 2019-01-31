@@ -1,4 +1,4 @@
-﻿using ProyectoWeb.EmpleadosServiceReference;
+﻿
 using ProyectoWeb.EmpleadosWS;
 using System;
 using System.Collections.Generic;
