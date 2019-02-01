@@ -19,9 +19,6 @@ namespace ProyectoWeb.Controllers
         public ActionResult Login()
         {
             EMPLEADOS emp = new EMPLEADOS();
-
-
-
             return View(emp);
         }
         [HttpPost]
@@ -29,15 +26,16 @@ namespace ProyectoWeb.Controllers
         {
             using(var clientews=new EmpleadosWS.EmpleadosWSSoapClient()) {
                 EMPLEADOS leer=clientews.Leer(emp.USUARIO);
-                if (leer.CLAVE==emp.CLAVE)
+                if (leer!=null && leer.CLAVE==emp.CLAVE)
                 {
-                    // redirecciona
+                    Session["usuario"]=emp;
+                    Response.Redirect("/Empleado/PantallaInicial/");
                 } else
                 {
+                    ViewBag.mensaje="Usuario incorrecto";
                     // quizas podemos mostrar un mesaje
                 }
             }
-
             return View(emp);
         }
         public ActionResult PantallaInicial()

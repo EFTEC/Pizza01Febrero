@@ -14,43 +14,44 @@
 <body>
     <div> 
         <h1 class="display-5">Pizzas Napoleon</h1>
-
-        <table border="0">
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="Lbl_usuario">Usuario:</label>
-                    <input type="text" id="Txt_usuario" class="form-control" />
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="Lbl_clave">Clave:</label>
-                    <input type="password" id="Txt_clave" class="form-control" />
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="submit" class="btn btn-secondary btn-lg">Login</button>
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="Lbl_mensaje">Mensaje</label>
-                </td>
-            </tr>
-        </table>
+        <form method="post">
+            <table border="0">
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Lbl_usuario">Usuario:</label>
+                        <input type="text" name="USUARIO" id="Txt_usuario" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Lbl_clave">Clave:</label>
+                        <input type="password" name="CLAVE" id="Txt_clave" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-secondary btn-lg">Login</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Lbl_mensaje">@ViewBag.mensaje</label>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
 </body>
 </html>

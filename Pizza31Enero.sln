@@ -13,6 +13,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "recursos", "recursos", "{7DEAED11-5686-4107-9459-B4C3512F5B08}"
 	ProjectSection(SolutionItems) = preProject
 		recursos\Ejercicio final.xmind = recursos\Ejercicio final.xmind
+		formulario.md = formulario.md
 		scripts.sql = scripts.sql
 	EndProjectSection
 EndProject

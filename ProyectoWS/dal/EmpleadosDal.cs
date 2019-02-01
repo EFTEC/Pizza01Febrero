@@ -13,7 +13,8 @@ namespace ProyectoWS.DAL
             var emp = new EMPLEADOS();
             using (var grupo = new Model2())
             {
-                emp = grupo.EMPLEADOS.Where(e => e.USUARIO == usuario).First();
+                emp = grupo.EMPLEADOS
+                    .Where(e => e.USUARIO == usuario).FirstOrDefault(); // devuelve el primero, sino se cae.
                 return emp;
             }
         }

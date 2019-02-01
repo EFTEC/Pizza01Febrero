@@ -1,10 +1,9 @@
-﻿
+﻿@using ProyectoWeb.PizzaWS
+@using ProyectoWeb.ClientesWS
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -24,9 +23,13 @@
                     <label id="Lbl_pizza">Pizza:</label>
                 </td>
                 <td>
+                 
                     <select class="custom-select custom-select-sm">
                         <option selected>Seleccione un valor</option>
-                        <option value="1">OpcionVariable</option>
+                        @foreach (PIZZAS pizza in ViewBag.listapizza)
+                        {
+                            <option value="@pizza.IDPIZZA">@pizza.TITULO</option>
+                        }
                     </select>
                 </td>
             </tr>
@@ -35,9 +38,13 @@
                     <label id="Lbl_cliente">Cliente:</label>
                 </td>
                 <td>
+                    <!-- using ProyectoWeb.ClientesWS-->
                     <select class="custom-select custom-select-sm">
                         <option selected>Seleccione un valor</option>
-                        <option value="1">OpcionVariable</option>
+                        @foreach (CLIENTES cli in ViewBag.listacliente)
+                        {
+                            <option value="@cli.RUT">@cli.NOMBRE</option>
+                        }
                     </select>
                 </td>
             </tr>
