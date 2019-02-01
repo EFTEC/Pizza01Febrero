@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoWeb.ClientesWS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,12 +17,28 @@ namespace ProyectoWeb.Controllers
 
         public ActionResult ListarClientes()
         {
+            using(var clientesws=new ClientesWS.ClientesWSSoapClient())
+            {
+                ViewBag.listaclientes=clientesws.Listar();
+            }
             return View();
         }
 
+        [HttpGet]
         public ActionResult IngresarCliente()
         {
-            return View();
+            CLIENTES cli=new CLIENTES();
+            return View(cli);
+        }
+        [HttpPost]
+        public ActionResult IngresarCliente(CLIENTES cli)
+        {
+            using(var clientesws=new ClientesWS.ClientesWSSoapClient())
+            {
+                clientesws.Insertar(cli);
+            }
+            Response.Redirect("/Cliente/ListarClientes");
+            return View(cli);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace ProyectoWS.datos
     public partial class ORDENES
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+      //  [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public decimal IDORDEN { get; set; }
 
         public decimal? IDPIZZA { get; set; }

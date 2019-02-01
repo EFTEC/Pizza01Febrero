@@ -11,68 +11,70 @@
     <title>Ingresar Orden</title>
 </head>
 <body>
-    <div>
-        <h5 class="display-5">Ingreso de Orden</h5>
+    <form method="post">
+        <div>
+            <h5 class="display-5">Ingreso de Orden</h5>
 
-        <table border="0">
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="Lbl_pizza">Pizza:</label>
-                </td>
-                <td>
-                 
-                    <select class="custom-select custom-select-sm">
-                        <option selected>Seleccione un valor</option>
-                        @foreach (PIZZAS pizza in ViewBag.listapizza)
-                        {
-                            <option value="@pizza.IDPIZZA">@pizza.TITULO</option>
-                        }
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="Lbl_cliente">Cliente:</label>
-                </td>
-                <td>
-                    <!-- using ProyectoWeb.ClientesWS-->
-                    <select class="custom-select custom-select-sm">
-                        <option selected>Seleccione un valor</option>
-                        @foreach (CLIENTES cli in ViewBag.listacliente)
-                        {
-                            <option value="@cli.RUT">@cli.NOMBRE</option>
-                        }
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="Lbl_cantidad">Cantidad:</label>
-                </td>
-                <td>
-                    <input type="text" id="Txt_cantidad" class="form-control" />
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="submit" class="btn btn-secondary btn-block">Ingresar Orden</button>
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="Lbl_mensaje">Mensaje</label>
-                </td>
-            </tr>
-        </table>
-    </div>
+            <table border="0">
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Lbl_pizza">Pizza:</label>
+                    </td>
+                    <td>
+
+                        <select name="IDPIZZA" class="custom-select custom-select-sm">
+                            <option selected>Seleccione un valor</option>
+                            @foreach (PIZZAS pizza in ViewBag.listapizza)
+                            {
+                                <option value="@pizza.IDPIZZA">@pizza.TITULO</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Lbl_cliente">Cliente:</label>
+                    </td>
+                    <td>
+                        <!-- using ProyectoWeb.ClientesWS-->
+                        <select name="USUARIO" class="custom-select custom-select-sm">
+                            <option selected>Seleccione un valor</option>
+                            @foreach (CLIENTES cli in ViewBag.listacliente)
+                            {
+                                <option value="@cli.RUT">@cli.NOMBRE</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Lbl_cantidad">Cantidad:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="CANTIDAD" id="Txt_cantidad" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-secondary btn-block">Ingresar Orden</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="Lbl_mensaje">Mensaje</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
 </body>
 </html>
