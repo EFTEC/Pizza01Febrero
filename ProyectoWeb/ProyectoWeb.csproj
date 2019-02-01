@@ -120,6 +120,33 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\OrdenesWS\configuration91.svcinfo" />
+    <None Include="Connected Services\OrdenesWS\configuration.svcinfo" />
+    <Content Include="Connected Services\OrdenesWS\ProyectoWeb.OrdenesWS.InsertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\OrdenesWS\ProyectoWeb.OrdenesWS.ListarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\OrdenesWS\ProyectoWeb.OrdenesWS.ORDENES.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\OrdenesWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PizzaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PizzaWS\configuration.svcinfo" />
+    <Content Include="Connected Services\PizzaWS\ProyectoWeb.PizzaWS.ListarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PizzaWS\ProyectoWeb.PizzaWS.PIZZAS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\PizzaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -131,6 +158,16 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\EmpleadosWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OrdenesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PizzaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -147,6 +184,8 @@
     <Content Include="Views\web.config" />
     <None Include="Connected Services\ClientesWS\ClientesWS.wsdl" />
     <None Include="Connected Services\EmpleadosWS\EmpleadosWS.wsdl" />
+    <None Include="Connected Services\OrdenesWS\OrdenesWS.wsdl" />
+    <None Include="Connected Services\PizzaWS\PizzasWS.wsdl" />
     <None Include="packages.config" />
     <Content Include="Views\Empleado\Login.cshtml" />
     <Content Include="Views\Empleado\PantallaInicial.cshtml" />
@@ -172,6 +211,8 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ClientesWS\" />
     <WCFMetadataStorage Include="Connected Services\EmpleadosWS\" />
+    <WCFMetadataStorage Include="Connected Services\OrdenesWS\" />
+    <WCFMetadataStorage Include="Connected Services\PizzaWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
