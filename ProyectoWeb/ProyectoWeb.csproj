@@ -193,6 +193,7 @@
     <Content Include="Views\Cliente\ListarClientes.cshtml" />
     <Content Include="Views\Cliente\IngresarCliente.cshtml" />
     <Content Include="Views\Pizza\IngresarOrden.cshtml" />
+    <Content Include="Views\Empleado\Logout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

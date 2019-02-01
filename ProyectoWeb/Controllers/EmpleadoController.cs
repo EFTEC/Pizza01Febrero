@@ -38,6 +38,14 @@ namespace ProyectoWeb.Controllers
             }
             return View(emp);
         }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            Session["usuario"]=null; // otra alternativa
+            Response.Redirect("Empleado/Login");
+            return View();
+        }
         public ActionResult PantallaInicial()
         {
             return View();
